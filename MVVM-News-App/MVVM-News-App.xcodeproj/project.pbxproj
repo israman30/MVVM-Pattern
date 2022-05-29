@@ -13,6 +13,8 @@
 		8D9D4A6928431BBD002083E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D4A6728431BBD002083E3 /* Main.storyboard */; };
 		8D9D4A6B28431BC0002083E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D4A6A28431BC0002083E3 /* Assets.xcassets */; };
 		8D9D4A6E28431BC0002083E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D4A6C28431BC0002083E3 /* LaunchScreen.storyboard */; };
+		8D9D4A7828431FCF002083E3 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D4A7728431FCF002083E3 /* WebService.swift */; };
+		8D9D4A7B284322B1002083E3 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D4A7A284322B1002083E3 /* Articles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8D9D4A6A28431BC0002083E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D9D4A6D28431BC0002083E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D9D4A6F28431BC0002083E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D9D4A7728431FCF002083E3 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		8D9D4A7A284322B1002083E3 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				8D9D4A6128431BBD002083E3 /* AppDelegate.swift */,
 				8D9D4A6328431BBD002083E3 /* SceneDelegate.swift */,
+				8D9D4A79284322A4002083E3 /* Model */,
+				8D9D4A7628431FC0002083E3 /* Services */,
 				8D9D4A7528431E79002083E3 /* Controllers */,
 				8D9D4A6728431BBD002083E3 /* Main.storyboard */,
 				8D9D4A6A28431BC0002083E3 /* Assets.xcassets */,
@@ -73,6 +79,22 @@
 				8D9D4A6528431BBD002083E3 /* NewsListController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8D9D4A7628431FC0002083E3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D4A7728431FCF002083E3 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D9D4A79284322A4002083E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D4A7A284322B1002083E3 /* Articles.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +169,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9D4A6628431BBD002083E3 /* NewsListController.swift in Sources */,
+				8D9D4A7B284322B1002083E3 /* Articles.swift in Sources */,
 				8D9D4A6228431BBD002083E3 /* AppDelegate.swift in Sources */,
+				8D9D4A7828431FCF002083E3 /* WebService.swift in Sources */,
 				8D9D4A6428431BBD002083E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
