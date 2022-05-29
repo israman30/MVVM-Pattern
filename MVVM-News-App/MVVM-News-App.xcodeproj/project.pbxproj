@@ -58,13 +58,21 @@
 			children = (
 				8D9D4A6128431BBD002083E3 /* AppDelegate.swift */,
 				8D9D4A6328431BBD002083E3 /* SceneDelegate.swift */,
-				8D9D4A6528431BBD002083E3 /* NewsListController.swift */,
+				8D9D4A7528431E79002083E3 /* Controllers */,
 				8D9D4A6728431BBD002083E3 /* Main.storyboard */,
 				8D9D4A6A28431BC0002083E3 /* Assets.xcassets */,
 				8D9D4A6C28431BC0002083E3 /* LaunchScreen.storyboard */,
 				8D9D4A6F28431BC0002083E3 /* Info.plist */,
 			);
 			path = "MVVM-News-App";
+			sourceTree = "<group>";
+		};
+		8D9D4A7528431E79002083E3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D4A6528431BBD002083E3 /* NewsListController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

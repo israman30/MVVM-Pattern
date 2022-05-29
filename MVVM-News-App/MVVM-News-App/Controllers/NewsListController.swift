@@ -13,7 +13,12 @@ class NewsListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
         title = "News App"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
