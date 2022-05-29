@@ -20,13 +20,42 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Vpn-Lg-kR3">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Vpn-Lg-kR3" customClass="ArticleTableViewCell" customModule="MVVM_News_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="42.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vpn-Lg-kR3" id="Yco-LP-Mzm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5DK-ig-mHN">
+                                                    <rect key="frame" x="5" y="0.0" width="404" height="42.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ic-37-ZiR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="404" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIC-Cz-3Oo">
+                                                            <rect key="frame" x="0.0" y="22" width="404" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5DK-ig-mHN" secondAttribute="trailing" constant="5" id="JNd-D0-1G6"/>
+                                                <constraint firstAttribute="bottom" secondItem="5DK-ig-mHN" secondAttribute="bottom" id="PNl-rM-CKO"/>
+                                                <constraint firstItem="5DK-ig-mHN" firstAttribute="leading" secondItem="Yco-LP-Mzm" secondAttribute="leading" constant="5" id="S3x-g2-1jw"/>
+                                                <constraint firstItem="5DK-ig-mHN" firstAttribute="top" secondItem="Yco-LP-Mzm" secondAttribute="top" id="qTf-hD-bYN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLable" destination="dIC-Cz-3Oo" id="nvk-Aw-3KH"/>
+                                            <outlet property="titleLabel" destination="9ic-37-ZiR" id="tSC-B8-1NI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
