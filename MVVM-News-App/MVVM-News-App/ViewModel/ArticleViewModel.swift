@@ -11,7 +11,7 @@ struct ArticlesListViewModel {
     
     let articles: [Articles]
     
-    func numberOfSections() -> Int {
+    var numberOfSections: Int {
         return 1
     }
     
