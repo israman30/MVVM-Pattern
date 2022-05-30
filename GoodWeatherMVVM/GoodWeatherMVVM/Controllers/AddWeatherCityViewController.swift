@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class AddWeatherCityViewController: UIViewController {
     
     override func viewDidLoad() {
