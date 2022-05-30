@@ -10,8 +10,18 @@ import UIKit
 
 class AddWeatherCityViewController: UIViewController {
     
+    @IBOutlet weak var cityTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add City"
+    }
+    
+    @IBAction func saveCity() {
+        
+    }
+    
+    @IBAction func close() {
+        dismiss(animated: true)
     }
 }

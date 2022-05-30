@@ -90,10 +90,48 @@
                     <view key="view" contentMode="scaleToFill" id="4Y1-H3-mKp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-vn-KOm">
+                                <rect key="frame" x="15" y="101" width="384" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xcx-lF-9uQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajs-OH-1Pa">
+                                <rect key="frame" x="15" y="200" width="384" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="l6L-YG-iJL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveCity" destination="UFB-Qs-eQh" eventType="touchUpInside" id="rSV-pW-u9k"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wbT-j0-488"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HQY-vn-KOm" firstAttribute="top" secondItem="wbT-j0-488" secondAttribute="top" constant="45" id="WD2-u7-9YD"/>
+                            <constraint firstItem="wbT-j0-488" firstAttribute="trailing" secondItem="Ajs-OH-1Pa" secondAttribute="trailing" constant="15" id="YNf-Bo-Ho4"/>
+                            <constraint firstItem="HQY-vn-KOm" firstAttribute="leading" secondItem="wbT-j0-488" secondAttribute="leading" constant="15" id="ggD-eZ-lg9"/>
+                            <constraint firstItem="Ajs-OH-1Pa" firstAttribute="leading" secondItem="wbT-j0-488" secondAttribute="leading" constant="15" id="jC8-4P-yDg"/>
+                            <constraint firstItem="wbT-j0-488" firstAttribute="trailing" secondItem="HQY-vn-KOm" secondAttribute="trailing" constant="15" id="rDT-Gh-anR"/>
+                            <constraint firstItem="Ajs-OH-1Pa" firstAttribute="top" secondItem="HQY-vn-KOm" secondAttribute="bottom" constant="54" id="w4L-rJ-Tzy"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ffx-fV-rsI"/>
+                    <navigationItem key="navigationItem" id="ffx-fV-rsI">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="jLa-Ng-uRZ">
+                            <connections>
+                                <action selector="close" destination="UFB-Qs-eQh" id="3Ms-nI-dg6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityTextField" destination="HQY-vn-KOm" id="8tO-eL-euh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TK-Vy-HDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
