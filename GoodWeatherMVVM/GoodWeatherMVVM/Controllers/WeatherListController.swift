@@ -33,8 +33,14 @@ class WeatherListController: UIViewController {
         tableView.dataSource = self
     }
 
-
 }
+
+extension WeatherListController: AddWeatherDelegate {
+    func addWeatherDidSaved(vm: WeatherViewModel) {
+        print(vm)
+    }
+}
+
 extension WeatherListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,5 +57,17 @@ extension WeatherListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddWeather" {
+            prepareForSegueForAddWeather(with: segue)
+        }
+    }
+    
+    func prepareForSegueForAddWeather(with segue: UIStoryboardSegue) {
+        guard let nav = segue.destination as? UINavigationController else { return }
+        guard let addWeatherCityVC = nav.viewControllers.first as? AddWeatherCityViewController else { return }
+        addWeatherCityVC.weatherDelegate = self
     }
 }
