@@ -14,6 +14,16 @@ class WeatherListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        let resorces = Resource<WeatherResponse>(url: URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Washington&appid=f755d47212d4330310d42041f6b06a21&units=imperial")!) { data in
+            
+            try? JSONDecoder().decode(WeatherResponse.self, from: data)
+        }
+        WeatherService().load(resource: resorces) { response in
+            if let response = response {
+                print(response)
+            }
+        }
     }
     
     private func setup() {
@@ -28,7 +38,7 @@ class WeatherListController: UIViewController {
 extension WeatherListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
